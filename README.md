@@ -26,7 +26,7 @@ Coder Finder is a platform that connects web developers with clients or companie
 [License](#license)
 
 ## Description
-Find My Coder is a platform that connects web developers with potential clients or companies. It allows developers to create and edit a profile that showcases their skills, while clients can search for and view web developers and their profiles. Web development is the niche market that this application supports. It connects web developers and clients that are looking to easily find developers who can meet their specific needs. The application takes the work out of having to sift through other types of freelancers.
+Coder Finder is a platform that connects web developers with potential clients or companies. It allows developers to create and edit a profile that showcases their skills, while clients can search for and view web developers and their profiles. Web development is the niche market that this application supports. It connects web developers and clients that are looking to easily find developers who can meet their specific needs. The application takes the work out of having to sift through other types of freelancers.
 
 ## Technology
 Key technologies and npm packages used in this project:
