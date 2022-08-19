@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ :root {
+    --seagreen: #4AB8B1;
+    ;
+    --marigold: #f0a202ff;
+    --indigo-dye: #294a66ff;
+    --mint-cream: #f2f7f2ff;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.App {
+    text-align: center;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    flex: 1;
+}
+
+.hero .but2 {
+    position: absolute;
+    top: 70%;
+    left: 22.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: var(--seagreen);
+    color: white;
+    font-size: 20px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero .but1 {
+    position: absolute;
+    top: 70%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: var(--seagreen);
+    color: white;
+    font-size: 20px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.aboutus {
+    color: var(--indigo-dye);
+    padding: 50px;
+}
+
+.mainh1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 200;
+    padding: 30px 10px 30px 10px;
+    letter-spacing: 2px;
+    margin: 0px
+}
+
+.mainh2 {
+    font-size: 20px;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 200;
+    padding: 30px 10px 30px 10px;
+    letter-spacing: 2px;
+    margin: 0px
+}
+
+.devmain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--indigo-dye);
+    color: white;
+    padding: 50px;
+}
+
+.testimonials,
+.articleSection,
+.aboutDev {
+    background-color: var(--marigold);
+    color: white;
+    padding: 50px;
+    width: 100%;
+}
+
+.pmain {
+    padding: 0px 100px 10px 100px;
+    font-weight: 200;
+    font-size: 25px;
+    text-align: center;
+    margin: 0px;
+}
+
+.profileform {
+    padding: 45px;
+    font-size: 20px;
+}
+
+.profiledevcont {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.editprofile {
+    background-color: var(--seagreen);
+    color: white;
+    font-size: 20px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px
+}
+
+.login-container {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 150px;
+}
+
+.login-form {
+    width: 95%;
+    padding: 15px;
+    margin: auto;
+    line-height: 400%;
+}
+
+.searchdiv {
+    padding-bottom: 40px;
+    background-color: var(--marigold);
+}
+
+.sr {
+    border: thin solid var(--indigo-dye);
+    border-radius: 3rem;
+    margin: 85px;
+    padding: 30px;
+    background-color: var(--indigo-dye);
+}
+
+.search-but {
+    text-decoration: none;
+    background-color: var(--indigo-dye);
+    color: white;
+    padding: 50px 30px 50px 30px;
+    border: thin solid var(--indigo-dye);
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 45px;
+    box-shadow: 1px 1px 16px 8px rgba(48, 100, 214, 0.5);
+    transition: all 0.3s ease 0s;
+}
+
+.search-but:hover {
+    background-color: var(--seagreen);
+    color: white;
+    border: thin solid var(--seagreen);
+    box-shadow: 1px 1px 16px 8px rgba(48, 100, 214, 0.5);
+    cursor: pointer;
+    transform: scale(1.34);
+}
+
+.searchbuttons {
+    display: flex;
+    justify-content: center;
+}
+
+.infobut {
+    background-color: #F0A202;
+    border: none;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.infobut:hover {
+    background-color: var(--seagreen);
+    color: white;
+    box-shadow: 1px 1px 23px 5px rgba(57, 223, 223, 0.5);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--marigold);
+}
+
+.profile-info {
+    background-color: var(--mint-cream);
+    color: black;
+    padding: 60px;
+    margin: 50px
+}
+
+.profiletitles {
+    font-weight: 400;
+    font-size: 25px;
+    color: rgb(0, 67, 130);
+    margin: 0px;
+    padding-top: 10px
+}
+
+.profiletext {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.homeclientpage {
+    padding: 30px;
+    background-color: var(--indigo-dye);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.m-4 {
+    border: thin solid var(--marigold);
+    transition: all 0.3s ease 0s;
+}
+
+.m-4:hover {
+    transform: scale(1.14);
+}
+
+.article-cards {
+    border: thin solid var(--marigold);
+    transition: all 0.3s ease 0s;
+}
+
+.article-cards:hover {
+    transform: scale(1.14);
+}
+
+.devs {
+    display: flex;
+    flex-direction: center;
+}
+
+.testimonialtext {
+    font-size: 30px;
+    font-weight: 200;
+    padding: 40px 60px 40px 40px
+}
+
+.testname {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+@media screen and (max-width:1089px) {
+    .testimonialcon {
+        flex-direction: column;
+    }
+    .testimonialtext {
+        padding: 30px 60px 30px 40px;
+        margin: 0px
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .mainh1 {
+        font-size: 30px;
+    }
+    .mainh2 {
+        font-size: 20px;
+        text-align: start;
+    }
+    .pmain {
+        font-size: 15px;
+        text-align: start;
+        padding: 0;
+    }
+    .hero .but1 {
+        left: 40%;
+        font-size: 15px;
+    }
+    .hero .but2 {
+        left: 15%;
+        font-size: 15px;
+    }
+    .login-container {
+        width: 90%;
+    }
+}
