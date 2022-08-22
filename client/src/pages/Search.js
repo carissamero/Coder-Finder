@@ -18,16 +18,19 @@ export default function SearchDev() {
 
     return ( <
         div style = {
-            { backgroundColor: '#f0a202', padding: '45px' } } >
+            { backgroundColor: '#f0a202', padding: '45px' }
+        } >
         <
         div className = "searchdiv" >
         <
         div style = {
-            { margin: '40px 40px 0px 40px' } } >
+            { margin: '40px 40px 0px 40px' }
+        } >
         <
         h1 className = "mainh1"
         style = {
-            { padding: '20px 45px 45px 45px', color: 'white' } } > What type of web developer are you searching
+            { padding: '20px 45px 45px 45px', color: 'white' }
+        } > What type of web developer are you searching
         for ? < /h1> <
         div className = 'searchbuttons' >
         <
@@ -39,16 +42,18 @@ export default function SearchDev() {
         href = '#backenddevs' > Back - end < /a> <
         a name = 'fullstack'
         className = "search-but"
-        href = '#fullstackdevs' > Full - stack < /a> <
-        /div> <
+        href = '#fullstackdevs' > Full - stack < /a> < /
+        div > <
         div style = {
-            { display: 'flex', justifyContent: 'center' } } >
+            { display: 'flex', justifyContent: 'center' }
+        } >
         <
         img src = { developerimg }
         alt = 'developer'
         style = {
-            { maxWidth: '600px' } } > < /img> <
-        /div> <
+            { maxWidth: '600px' }
+        } > < /img> < /
+        div > <
         /div>
 
         <
@@ -56,7 +61,8 @@ export default function SearchDev() {
 
         <
         hr style = {
-            { opacity: '0.5', margin: '35px 160px 35px 160px', color: 'lightgray' } }
+            { opacity: '0.5', margin: '35px 160px 35px 160px', color: 'lightgray' }
+        }
         />
 
         <
@@ -66,34 +72,37 @@ export default function SearchDev() {
         <
         h1 className = 'mainh1'
         style = {
-            { marginTop: '25px', color: 'white' } }
+            { marginTop: '25px', color: 'white' }
+        }
         id = 'frontenddevs' > Front - End Developers : < /h1> <
         FEDeveloperList fedevelopers = { fedevelopers }
-        /> <
-        /div>
+        /> < /
+        div >
 
         <
         div className = 'sr' >
         <
         h1 className = 'mainh1'
         style = {
-            { marginTop: '25px', color: 'white' } }
+            { marginTop: '25px', color: 'white' }
+        }
         id = 'backenddevs' > Back - End Developers: < /h1> <
         BEDeveloperList bedevelopers = { bedevelopers }
-        /> <
-        /div>
+        /> < /
+        div >
 
         <
         div className = 'sr' >
         <
         h1 className = 'mainh1'
         style = {
-            { marginTop: '25px', color: 'white' } }
+            { marginTop: '25px', color: 'white' }
+        }
         id = 'fullstackdevs' > Full - Stack Developers: < /h1> <
         FSDeveloperList fsdevelopers = { fsdevelopers }
-        /> <
-        /div> <
-        /div>           <
-        /div>    
+        /> < /
+        div > <
+        /div>           < /
+        div >
     )
 }

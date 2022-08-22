@@ -36,7 +36,8 @@ export default function ClientProfile() {
     if (!user ? .fullName) {
         return ( <
             h4 style = {
-                { padding: '40px', textAlign: 'center', fontSize: '30px', margin: '65px', backgroundColor: '#4AB8B1', color: 'white' } } >
+                { padding: '40px', textAlign: 'center', fontSize: '30px', margin: '65px', backgroundColor: '#4AB8B1', color: 'white' }
+            } >
             You need to be logged in to see your profile page.Use the navigation links above to sign up or log in !
             <
             /h4>
@@ -60,7 +61,7 @@ export default function ClientProfile() {
         formData.append("file", files[0]);
         formData.append("upload_preset", "vylq4hww");
 
-        Axios.post("https://api.cloudinary.com/v1_1/darylnauman/image/upload", formData)
+        Axios.post("https://api.cloudinary.com/carissamero/image/upload", formData)
             .then((res) => {
                 const profileImageURL = res.data.secure_url;
                 setModalData({...modalData, profileImage: profileImageURL })
@@ -93,20 +94,25 @@ export default function ClientProfile() {
     return ( <
         div className = "profiledevcont"
         style = {
-            { backgroundColor: "#F0A202" } } >
+            { backgroundColor: "#F0A202" }
+        } >
         <
         h1 className = "mainh1"
         style = {
-            { backgroundColor: '#F0A202', paddingTop: '50px' } } > PROFILE: < /h1> <
+            { backgroundColor: '#F0A202', paddingTop: '50px' }
+        } > PROFILE: < /h1> <
         div style = {
-            { display: 'flex', justifyContent: 'center' } } >
+            { display: 'flex', justifyContent: 'center' }
+        } >
         <
         img src = { user.profileImage }
         style = {
-            { maxWidth: "500px", display: 'flex' } }
+            { maxWidth: "500px", display: 'flex' }
+        }
         alt = { "user profile" } >
-        < /img> <
-        /div>
+        <
+        /img> < /
+        div >
 
         <
         div className = 'profile' >
@@ -140,15 +146,14 @@ export default function ClientProfile() {
                 }
             } >
             Edit Profile <
-            /Button> :  <
-            >
+            /Button> :  < >
             <
             />
         }
 
         <
-        /div> <
-        /div>
+        /div> < /
+        div >
 
         <
         Modal show = { show }
@@ -156,8 +161,8 @@ export default function ClientProfile() {
         <
         Modal.Header closeButton >
         <
-        Modal.Title > Edit Profile < /Modal.Title> <
-        /Modal.Header> <
+        Modal.Title > Edit Profile < /Modal.Title> < /
+        Modal.Header > <
         Form className = "profileform"
         action = "/upload"
         method = "POST"
@@ -174,8 +179,8 @@ export default function ClientProfile() {
                 uploadImage(event.target.files);
             }
         }
-        /> <
-        /Form.Group>
+        /> < /
+        Form.Group >
 
         <
         Form.Group as = { Row }
@@ -190,12 +195,13 @@ export default function ClientProfile() {
         value = { modalData.fullName }
         name = "fullName"
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         style = {
-            { paddingBottom: '10px' } }
+            { paddingBottom: '10px' }
+        }
         className = "mb-3"
         controlId = "formPlaintextEmail" >
         <
@@ -206,12 +212,13 @@ export default function ClientProfile() {
         onChange = { handleInputChange } >
         <
         option style = {
-            { color: 'lightgray' } }
+            { color: 'lightgray' }
+        }
         value = { modalData.primaryFocus } > Open this menu to select < /option> <
         option value = "Front-End" > Front - End < /option> <
         option value = "Back-End" > Back - End < /option> <
-        option value = "Full-Stack" > Full - Stack < /option> <
-        /Form.Select> <
+        option value = "Full-Stack" > Full - Stack < /option> < /
+        Form.Select > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -226,8 +233,8 @@ export default function ClientProfile() {
         name = "company"
         value = { modalData.company }
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -241,8 +248,8 @@ export default function ClientProfile() {
         placeholder = { user.sampleProjectName }
         value = { modalData.sampleProjectName }
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -256,8 +263,8 @@ export default function ClientProfile() {
         placeholder = { user.servicesOffered }
         value = { modalData.servicesOffered }
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Button variant = "primary"
         onClick = { handleModalSubmit }
@@ -269,11 +276,11 @@ export default function ClientProfile() {
             }
         } >
         Save Changes <
-        /Button> <
-        /Form>
+        /Button> < /
+        Form >
 
         <
-        /Modal> <
-        /div>
+        /Modal> < /
+        div >
     );
 }

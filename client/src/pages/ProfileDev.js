@@ -36,7 +36,8 @@ export default function ProfileDev() {
     if (!user ? .fullName) {
         return ( <
             h4 style = {
-                { padding: '40px', textAlign: 'center', fontSize: '30px', margin: '65px', backgroundColor: '#4AB8B1', color: 'white' } } >
+                { padding: '40px', textAlign: 'center', fontSize: '30px', margin: '65px', backgroundColor: '#4AB8B1', color: 'white' }
+            } >
             You need to be logged in to see your profile page.Use the navigation links above to sign up or log in !
             <
             /h4>
@@ -60,7 +61,7 @@ export default function ProfileDev() {
         formData.append("file", files[0]);
         formData.append("upload_preset", "vylq4hww");
 
-        Axios.post("https://api.cloudinary.com/v1_1/darylnauman/image/upload", formData)
+        Axios.post("https://api.cloudinary.com/v1_1/carissamero/image/upload", formData)
             .then((res) => {
                 const profileImageURL = res.data.secure_url;
                 setModalData({...modalData, profileImage: profileImageURL })
@@ -93,20 +94,25 @@ export default function ProfileDev() {
     return ( <
         div className = "profiledevcont"
         style = {
-            { backgroundColor: "#F0A202" } } >
+            { backgroundColor: "#F0A202" }
+        } >
         <
         h1 className = "mainh1"
         style = {
-            { backgroundColor: '#F0A202', paddingTop: '50px' } } > PROFILE: < /h1> <
+            { backgroundColor: '#F0A202', paddingTop: '50px' }
+        } > PROFILE: < /h1> <
         div style = {
-            { display: 'flex', justifyContent: 'center' } } >
+            { display: 'flex', justifyContent: 'center' }
+        } >
         <
         img src = { user.profileImage }
         style = {
-            { maxWidth: "500px", display: 'flex' } }
+            { maxWidth: "500px", display: 'flex' }
+        }
         alt = { "user profile" } >
-        < /img> <
-        /div>
+        <
+        /img> < /
+        div >
 
         <
         div className = 'profile' >
@@ -154,8 +160,8 @@ export default function ProfileDev() {
             }
         } >
         Edit Profile <
-        /Button> <
-        /div> <
+        /Button> < /
+        div > <
         /div>
 
         <
@@ -164,8 +170,8 @@ export default function ProfileDev() {
         <
         Modal.Header closeButton >
         <
-        Modal.Title > Edit Profile < /Modal.Title> <
-        /Modal.Header> <
+        Modal.Title > Edit Profile < /Modal.Title> < /
+        Modal.Header > <
         Form className = "profileform"
         action = "/upload"
         method = "POST"
@@ -182,8 +188,8 @@ export default function ProfileDev() {
                 uploadImage(event.target.files);
             }
         }
-        /> <
-        /Form.Group>
+        /> < /
+        Form.Group >
 
         <
         Form.Group as = { Row }
@@ -198,12 +204,13 @@ export default function ProfileDev() {
         value = { modalData.fullName }
         name = "fullName"
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         style = {
-            { paddingBottom: '10px' } }
+            { paddingBottom: '10px' }
+        }
         className = "mb-3"
         controlId = "formPlaintextEmail" >
         <
@@ -213,12 +220,13 @@ export default function ProfileDev() {
         onChange = { handleInputChange } >
         <
         option style = {
-            { color: 'lightgray' } }
+            { color: 'lightgray' }
+        }
         value = { modalData.primaryFocus } > Open this menu to select < /option> <
         option value = "Front-End" > Front - End < /option> <
         option value = "Back-End" > Back - End < /option> <
-        option value = "Full-Stack" > Full - Stack < /option> <
-        /Form.Select> <
+        option value = "Full-Stack" > Full - Stack < /option> < /
+        Form.Select > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -232,8 +240,8 @@ export default function ProfileDev() {
         name = "userDescription"
         value = { modalData.userDescription }
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -247,8 +255,8 @@ export default function ProfileDev() {
         name = "skillSet"
         value = { modalData.skillSet }
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -262,8 +270,8 @@ export default function ProfileDev() {
         name = "hourlyRate"
         value = { modalData.hourlyRate }
         onChange = { handleIntegerChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -277,8 +285,8 @@ export default function ProfileDev() {
         name = "company"
         value = { modalData.company }
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -292,8 +300,8 @@ export default function ProfileDev() {
         placeholder = { user.sampleProjectURL }
         value = { modalData.sampleProjectURL }
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -307,8 +315,8 @@ export default function ProfileDev() {
         placeholder = { user.sampleProjectName }
         value = { modalData.sampleProjectName }
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -322,8 +330,8 @@ export default function ProfileDev() {
         placeholder = { user.linkedIn }
         value = { modalData.linkedIn }
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -337,8 +345,8 @@ export default function ProfileDev() {
         placeholder = { user.resumeURL }
         value = { modalData.resumeURL }
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -352,8 +360,8 @@ export default function ProfileDev() {
         placeholder = { user.gitHub }
         value = { modalData.gitHub }
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Form.Group as = { Row }
         className = "mb-3"
@@ -367,8 +375,8 @@ export default function ProfileDev() {
         placeholder = { user.servicesOffered }
         value = { modalData.servicesOffered }
         onChange = { handleInputChange }
-        /> <
-        /Col> <
+        /> < /
+        Col > <
         /Form.Group> <
         Button variant = "primary"
         onClick = { handleModalSubmit }
@@ -380,11 +388,11 @@ export default function ProfileDev() {
             }
         } >
         Save Changes <
-        /Button> <
-        /Form>
+        /Button> < /
+        Form >
 
         <
-        /Modal> <
-        /div>
+        /Modal> < /
+        div >
     );
 }
