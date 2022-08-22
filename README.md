@@ -65,20 +65,24 @@ Visit our deployed application and create either a developer or client account b
 
 ## Development Team
 Carissa Mero
-- [Email]()
-- [GitHub]()
+- [Email](carissamero@yahoo.com)
+- [GitHub](https://github.com/carissamero)
 
 Graciela Navarro
-- [Email]()
-- [GitHub]()
+- [Email](Ggracielanavarro@gmail.com)
+- [GitHub](https://github.com/avii004)
 
 Mark Bermejo
-- [Email]()
+- [Email](Mark.bermejo@hotmail.com)
 - [GitHub]()
 
 Kenneth Huang
-- [Email]()
-- [GitHub]()
+- [Email](kenneth443641@gmail.com)
+- [GitHub](GitHub.com/kekehua)
+
+Alexis Ramos
+- [Email](Alexramo2330@gmail.com)
+- [GitHub](https://github.com/AlexisR3099)
 
 ## Contributing
 Please contact a member of the development team if you wish to contribute to this application.

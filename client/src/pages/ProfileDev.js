@@ -33,6 +33,7 @@ export default function ProfileDev() {
         return <div> Loading... </div>
     }
 
+
     if (!user?.fullName) {
         return (<h4 style={
             { padding: '40px', textAlign: 'center', fontSize: '30px', margin: '65px', backgroundColor: '#4AB8B1', color: 'white' }} >
@@ -58,7 +59,7 @@ export default function ProfileDev() {
         formData.append("file", files[0]);
         formData.append("upload_preset", "vylq4hww");
 
-        Axios.post("https://api.cloudinary.com/v1_1/darylnauman/image/upload", formData)
+        Axios.post("https://api.cloudinary.com/v1_1/carissamero/image/upload", formData)
             .then((res) => {
                 const profileImageURL = res.data.secure_url;
                 setModalData({ ...modalData, profileImage: profileImageURL })
@@ -87,7 +88,6 @@ export default function ProfileDev() {
 
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true);
-
     return (
         <div className="profiledevcont"
             style={{ backgroundColor: "#F0A202" }}>
@@ -363,5 +363,6 @@ export default function ProfileDev() {
 
             </Modal>
         </div>
+
     );
 }
