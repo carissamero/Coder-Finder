@@ -40,57 +40,28 @@ const client = new ApolloClient({
 });
 
 function App() {
-    return ( <
-        ApolloProvider client = { client } >
-        <
-        Router >
-        <
-        div >
-        <
-        Navbar / >
-        <
-        Route exact path = "/"
-        component = { Main }
-        /> <
-        Route exact path = "/homecli"
-        component = { HomeCli }
-        /> <
-        Route exact path = "/homedev"
-        component = { HomeDev }
-        /> <
-        Route exact path = "/login"
-        component = { Login }
-        />   <
-        Route exact path = "/signup"
-        component = { Signup }
-        /> <
-        Route exact path = "/profiledev/:userId"
-        component = { ProfileDev }
-        /> <
-        Route exact path = "/me"
-        component = { ProfileDev }
-        /> <
-        Route exact path = "/client"
-        component = { ClientProfile }
-        /> <
-        Route exact path = "/profileclient/:userId"
-        component = { ProfileClient }
-        /> <
-        Route exact path = "/clientprofile/:userId"
-        component = { ClientProfile }
-        /> <
-        Route exact path = "/search"
-        component = { SearchDev }
-        /> <
-        Route exact path = "/about"
-        component = { About }
-        /> <
-        Footer / >
-        <
-        /div> <
-        /Router> <
-        /ApolloProvider>
-    )
+    return (
+        <ApolloProvider client={client} >
+        < Router >
+            < div >
+                <Navbar />
+                <Route exact path="/"component={Main}/> 
+                <Route exact path="/homecli"component={HomeCli}/> 
+                <Route exact path="/homedev"component={HomeDev}/> 
+                <Route exact path="/login"component={Login}/>
+                <Route exact path="/signup"component={Signup}/> 
+                <Route exact path="/profiledev/:userId"component={ProfileDev}/> 
+                <Route exact path="/me"component={ProfileDev}/> 
+                <Route exact path="/client"component={ClientProfile}/> 
+                <Route exact path="/profileclient/:userId"component={ProfileClient}/> 
+                <Route exact path="/clientprofile/:userId"component={ClientProfile}/> 
+                <Route exact path="/search"component={SearchDev}/>
+                <Route exact path="/about"component={About}/> 
+                <Footer />    
+                </div> 
+                </Router>
+                </ApolloProvider>    
+                )
 };
 
-export default App;
+                export default App;
