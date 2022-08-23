@@ -68,7 +68,7 @@ Carissa Mero
 - [Email](carissamero@yahoo.com)
 - [GitHub](https://github.com/carissamero)
 
-Graciela Navarro
+Gracie Navarro
 - [Email](Ggracielanavarro@gmail.com)
 - [GitHub](https://github.com/avii004)
 
