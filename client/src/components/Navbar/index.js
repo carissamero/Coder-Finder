@@ -26,7 +26,7 @@ const AppNavbar = () => {
                     { fontSize: '35px' }} >
                     <CgCodeSlash /> </span> <span style={{ fontSize: '30px' }}>Find My Coder</span >
                 </ReactBootStrap.Navbar.Brand>
-                <ReactBootStrap.Navbar.Toggle aria- controls="basic-navbar-nav" />
+                <ReactBootStrap.Navbar.Toggle aria-selected= "true" aria-controls ="basic-navbar-nav"/>
                 <ReactBootStrap.Navbar.Collapse id="basic-navbar-nav" >
                     <ReactBootStrap.Nav className="me-auto"
                         style={
@@ -58,7 +58,7 @@ const AppNavbar = () => {
             show={showModal}
             onHide={
                 () => setShowModal(false)}
-            aria- labelledby='signup-modal' >
+            aria-labelledby ='signup-modal' >
             <ReactBootStrap.Tab.Container defaultActiveKey='login' >
                 <ReactBootStrap.Modal.Header closeButton >
                     <ReactBootStrap.Modal.Title id='signup-modal' >

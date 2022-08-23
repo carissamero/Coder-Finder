@@ -29,7 +29,7 @@ export default function Signup() {
         console.log(formState);
 
         try {
-            const { data } = await addUser({
+            const {data} = await addUser({
                 variables: { ...formState },
             });
 
@@ -42,7 +42,7 @@ export default function Signup() {
             }
 
         } catch (e) {
-            console.error(e);
+            console.error({error});
         }
     };
     return (

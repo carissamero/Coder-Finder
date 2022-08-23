@@ -35,7 +35,7 @@ export default function Login(props) {
             }
 
         } catch (e) {
-            console.error(e);
+            console.error({error});
         }
 
         setFormState({

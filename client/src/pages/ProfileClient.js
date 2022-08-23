@@ -30,7 +30,7 @@ export default function ProfileBuyer() {
                     { display: 'flex', justifyContent: 'center' }} >
             <img src={user.profileImage}
                 style={
-                    { maxWidth: "500px", display: 'flex', backgroundColor: 'white', padding: '50px' }} >
+                    { maxWidth: "500px", display: 'flex', backgroundColor: 'white', padding: '50px' }} alt="profile" >
             </img> </div>
 
         <div className='profile' >

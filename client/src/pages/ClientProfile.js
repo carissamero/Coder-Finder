@@ -2,7 +2,7 @@ import React from "react";
 import Axios from 'axios';
 import { useState } from "react";
 import { Form, Col, Row, Button, Modal } from "react-bootstrap";
-import { useParams, Redirect } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import { useQuery, useMutation } from "@apollo/client";
 import { UPDATE_USER } from "../utils/mutations";
 import { QUERY_SINGLE_USER, QUERY_ME } from "../utils/queries";
@@ -26,7 +26,7 @@ export default function ClientProfile() {
     const [show, setShow] = useState(false);
 
     if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
-        return <Redirect to="/client" />
+        return <Navigate to="/client" />
     }
 
     if (loading) {
@@ -48,11 +48,11 @@ export default function ClientProfile() {
         setModalData({ ...modalData, [name]: value, })
     }
 
-    const handleIntegerChange = (event) => {
-        const { name, value } = event.target;
-        // console.log(value)
-        setModalData({ ...modalData, [name]: parseInt(value), })
-    }
+    // const handleIntegerChange = (event) => {
+    //     const { name, value } = event.target;
+    //     // console.log(value)
+    //     setModalData({ ...modalData, [name]: parseInt(value), })
+    // }
 
     const uploadImage = (files) => {
         const formData = new FormData();
@@ -64,8 +64,8 @@ export default function ClientProfile() {
                 const profileImageURL = res.data.secure_url;
                 setModalData({ ...modalData, profileImage: profileImageURL })
             })
-            .catch(error => {
-                console.log(error);
+            .catch((e) => {
+                console.log((error));
             })
     };
 
@@ -81,11 +81,11 @@ export default function ClientProfile() {
             handleClose()
             window.location.reload()
 
-        } catch (error) {
+        } catch (e) {
             console.error(error)
         }
     }
-
+    console.log ({data});
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true);
     return (<div className="profiledevcont"
@@ -176,7 +176,7 @@ export default function ClientProfile() {
                     controlId="formPlaintextEmail" >
                     <Form.Label > What type of web developer are you searching
                         for ? </Form.Label>
-                    <Form.Select aria- label="Floating label select example"
+                    <Form.Select aria-label="Floating label select example"
                         name="primaryFocus"
                         onChange={handleInputChange} >
                         <option style={

@@ -1,11 +1,11 @@
 import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import './App.css'
-import Navbar from './components/Navbar/index';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer/Footer';
 
 import Main from './pages/Main'
@@ -20,8 +20,7 @@ import About from './pages/About'
 import ClientProfile from './pages/ClientProfile';
 
 const httpLink = createHttpLink({
-    uri: '/graphql',
-    cache: new InMemoryCache(),
+    uri: 'http://localhost:3001/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -45,18 +44,20 @@ function App() {
         < Router >
             < div >
                 <Navbar />
-                <Route exact path="/"component={Main}/> 
-                <Route exact path="/homecli"component={HomeCli}/> 
-                <Route exact path="/homedev"component={HomeDev}/> 
-                <Route exact path="/login"component={Login}/>
-                <Route exact path="/signup"component={Signup}/> 
-                <Route exact path="/profiledev/:userId"component={ProfileDev}/> 
-                <Route exact path="/me"component={ProfileDev}/> 
-                <Route exact path="/client"component={ClientProfile}/> 
-                <Route exact path="/profileclient/:userId"component={ProfileClient}/> 
-                <Route exact path="/clientprofile/:userId"component={ClientProfile}/> 
-                <Route exact path="/search"component={SearchDev}/>
-                <Route exact path="/about"component={About}/> 
+                <Routes>
+                <Route exact path="/"component={<Main/>}/> 
+                <Route exact path="/homecli"component={<HomeCli/>}/> 
+                <Route exact path="/homedev"component={<HomeDev/>}/> 
+                <Route exact path="/login"component={<Login/>}/>
+                <Route exact path="/signup"component={<Signup/>}/> 
+                <Route exact path="/profiledev/:userId"component={<ProfileDev/>}/> 
+                <Route exact path="/me"component={<ProfileDev/>}/> 
+                <Route exact path="/client"component={<ClientProfile/>}/> 
+                <Route exact path="/profileclient/:userId"component={<ProfileClient/>}/> 
+                <Route exact path="/clientprofile/:userId"component={<ClientProfile/>}/> 
+                <Route exact path="/search"component={<SearchDev/>}/>
+                <Route exact path="/about"component={<About/>}/>
+                </Routes>
                 <Footer />    
                 </div> 
                 </Router>

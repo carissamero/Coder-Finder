@@ -2,10 +2,10 @@ import React from 'react';
 import '../App.css'
 
 import { Button, Card } from 'react-bootstrap';
-import article1 from '../images/article1.JPG'
-import article2 from '../images/article2.JPG'
-import article3 from '../images/article3.JPG'
-import article4 from '../images/article4.jpg'
+import article1 from '../images/article1.jpeg'
+import article2 from '../images/article2.jpeg'
+import article3 from '../images/article3.jpeg'
+import article4 from '../images/article4.jpeg'
 
 import { useQuery } from '@apollo/client';
 import { QUERY_USERS } from '../utils/queries';
