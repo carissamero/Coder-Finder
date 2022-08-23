@@ -17,7 +17,7 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import SearchDev from './pages/Search'
 import About from './pages/About'
-import ClientProfile from './pages/ClientProfile';
+import ClientProfile from './pages/ClientProfile'
 
 const httpLink = createHttpLink({
     uri: 'http://localhost:3001/graphql',
@@ -46,17 +46,17 @@ function App() {
                 <Navbar />
                 <Routes>
                 <Route exact path="/"component={<Main/>}/> 
-                <Route exact path="/homecli"component={<HomeCli/>}/> 
-                <Route exact path="/homedev"component={<HomeDev/>}/> 
-                <Route exact path="/login"component={<Login/>}/>
-                <Route exact path="/signup"component={<Signup/>}/> 
-                <Route exact path="/profiledev/:userId"component={<ProfileDev/>}/> 
-                <Route exact path="/me"component={<ProfileDev/>}/> 
-                <Route exact path="/client"component={<ClientProfile/>}/> 
-                <Route exact path="/profileclient/:userId"component={<ProfileClient/>}/> 
-                <Route exact path="/clientprofile/:userId"component={<ClientProfile/>}/> 
-                <Route exact path="/search"component={<SearchDev/>}/>
-                <Route exact path="/about"component={<About/>}/>
+                <Route exact path="/homecli"element={<HomeCli/>}/> 
+                <Route exact path="/homedev"element={<HomeDev/>}/> 
+                <Route exact path="/login" element={<Login/>}/>
+                <Route exact path="/signup"element={<Signup/>}/> 
+                <Route exact path="/profiledev/:userId"element={<ProfileDev/>}/> 
+                <Route exact path="/me"element={<ProfileDev/>}/> 
+                <Route exact path="/client"element={<ClientProfile/>}/> 
+                <Route exact path="/profileclient/:userId"element={<ProfileClient/>}/> 
+                <Route exact path="/clientprofile/:userId"element={<ClientProfile/>}/> 
+                <Route exact path="/search"element={<SearchDev/>}/>
+                <Route exact path="/about"element={<About/>}/>
                 </Routes>
                 <Footer />    
                 </div> 
