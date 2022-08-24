@@ -2,7 +2,7 @@ import React from "react";
 import Axios from 'axios';
 import { useState } from "react";
 import { Form, Col, Row, Button, Modal } from "react-bootstrap";
-import { useParams, Redirect } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import { useQuery, useMutation } from "@apollo/client";
 import { UPDATE_USER } from "../utils/mutations";
 import { QUERY_SINGLE_USER, QUERY_ME } from "../utils/queries";
@@ -26,7 +26,7 @@ export default function ProfileDev() {
     const [show, setShow] = useState(false);
 
     if (Auth.loggedIn() && Auth.getProfile().data._id === userParam) {
-        return <Redirect to="/me" />
+        return <Navigate to="/me" />
     }
 
     if (loading) {
@@ -64,8 +64,8 @@ export default function ProfileDev() {
                 const profileImageURL = res.data.secure_url;
                 setModalData({ ...modalData, profileImage: profileImageURL })
             })
-            .catch(error => {
-                console.log(error);
+            .catch(e => {
+                console.log({error});
             })
     };
 
@@ -81,8 +81,8 @@ export default function ProfileDev() {
             handleClose()
             window.location.reload()
 
-        } catch (error) {
-            console.error(error)
+        } catch (e) {
+            console.error({error})
         }
     }
 
