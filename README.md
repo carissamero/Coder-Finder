@@ -55,13 +55,16 @@ Visit our deployed application and create either a developer or client account b
 
 ## Screenshots
 #### Main Landing Page
-![Screenshot of the main landing page.]()
+![screencapture-localhost-3000-2022-08-24-19_22_00](https://user-images.githubusercontent.com/98194815/186546688-8419820f-afda-463a-88c1-d7acc28919c8.jpg)
+
 #### About Page
-![Screenshot of the about page.]()
+![screencapture-localhost-3000-about-2022-08-24-19_23_06](https://user-images.githubusercontent.com/98194815/186546803-68f4594c-df5f-40f7-9a19-259b6f7e79a4.jpg)
+
 #### Home Page (Developers)
-![Screenshot of the developers' home page.]()
+![screencapture-localhost-3000-homedev-2022-08-24-19_24_15 (1)](https://user-images.githubusercontent.com/98194815/186546954-e3a3d5e1-50ec-4cd0-a3b9-17d5ddb6d6e5.jpg)
+
 #### Search Page
-![Screenshot of the search page.]()
+![screencapture-localhost-3000-search-2022-08-24-19_25_23](https://user-images.githubusercontent.com/98194815/186547032-a19a9681-adf9-4426-a770-f946e59292fc.jpg)
 
 ## Development Team
 Carissa Mero
