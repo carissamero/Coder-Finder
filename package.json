@@ -1,0 +1,24 @@
+{
+  "name": "coder-finder",
+  "version": "1.0.0",
+  "description": "Coder Finder is a platform that connects web developers with clients or companies.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "concurrently \"cd server && node server.js\" \"cd client && npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carissamero/Coder-Finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carissamero/Coder-Finder/issues"
+  },
+  "homepage": "https://github.com/carissamero/Coder-Finder#readme",
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
