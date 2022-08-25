@@ -8,7 +8,7 @@ export default function HomeBuyer() {
 
     const { loading, data } = useQuery(QUERY_USERS);
     console.log(data)
-    const users = data ?.users || [];
+    const users = data?.users || [];
     const developers = users.filter(user => user.role === "developer")
 
 

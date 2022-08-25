@@ -35,7 +35,7 @@ export default function Login(props) {
             }
 
         } catch (e) {
-            console.error(e);
+            console.error({error});
         }
 
         setFormState({
@@ -58,20 +58,22 @@ export default function Login(props) {
                     style={
                         { backgroundColor: '#F0A202' }} >
                     <Form.Group >
-                        <Form.Label style={
-                            { margin: '5px 0', fontSize: '20px' }} > Email </Form.Label>
+                       
+                        <Form.Label style={{ margin: '5px 0', fontSize: '20px' }} > Email </Form.Label>
                         <Form.Control name='email'
                             type='email'
                             placeholder='email'
                             value={formState.email}
-                            onChange={handleChange} > </Form.Control> <hr />
-                        <Form.Label style={
-                            { fontSize: '20px' }} > Password </Form.Label>
+                            onChange={handleChange} > 
+                        </Form.Control> 
+                        
+                        <Form.Label style={{ fontSize: '20px' }} > Password </Form.Label>
                         <Form.Control name='password'
                             type='password'
                             placeholder='password'
                             value={formState.password}
-                            onChange={handleChange}> </Form.Control>
+                            onChange={handleChange}> 
+                        </Form.Control>
                     </Form.Group>
                     <Button style={
                         { backgroundColor: '#294A66', border: 'none', fontSize: '20px', padding: '12px 24px', marginTop: '15px' }}
