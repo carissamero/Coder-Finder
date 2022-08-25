@@ -2,6 +2,9 @@
   "name": "coder-finder",
   "version": "1.0.0",
   "description": "Coder Finder is a platform that connects web developers with clients or companies.",
+  "engines": {
+    "node": "16.15.0"
+  },
   "main": "index.js",
   "scripts": {
     "develop": "concurrently \"cd server && node server.js\" \"cd client && npm run start\"",
@@ -23,7 +26,6 @@
   },
   "homepage": "https://github.com/carissamero/Coder-Finder#readme",
   "dependencies": {
-    "concurrently": "^7.3.0",
-    "node": "16.15.0"
+    "concurrently": "^7.3.0"
   }
 }
