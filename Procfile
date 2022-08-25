@@ -1,3 +1,2 @@
-web: node seeds/seed.js
-frontend: npm run react-scripts start
+frontend: npm start
 backend: node server.js
