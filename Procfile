@@ -1,2 +1,2 @@
-frontend: npm start
-backend: node server.js
+frontend: npm run seed/server.js
+backend: npm run develop

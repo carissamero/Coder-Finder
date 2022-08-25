@@ -4,8 +4,12 @@
   "description": "Coder Finder is a platform that connects web developers with clients or companies.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "concurrently \"cd server && node server.js\" \"cd client && npm run start\""
+    "develop": "concurrently \"cd server && node server.js\" \"cd client && npm run start\"",
+    "start-client": "react-scripts start",
+    "build": "react-scripts build && (cd server && yarn install)",
+    "test": "react-scripts test",
+    "start": "cd server && yarn start",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
