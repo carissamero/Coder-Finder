@@ -7,12 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "develop": "concurrently \"cd server && node server.js\" \"cd client && npm run start\"",
-    "start-client": "react-scripts start",
-    "build": "react-scripts build && (cd server && yarn install)",
-    "test": "react-scripts test",
-    "start": "cd server && yarn start",
-    "eject": "react-scripts eject"
+    "develop": "concurrently \"cd server && node server.js\" \"cd client && npm run start\""
   },
   "repository": {
     "type": "git",
